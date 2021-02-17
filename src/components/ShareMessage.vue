@@ -22,7 +22,7 @@ export default {
         alert("シェアする内容を入力してください");
       } else {
         axios
-          .post("herokuのURL/api/shares", {
+          .post("hidden-journey-64474.herokuapp.com/api/shares", {
             user_id: this.$store.state.user.id,
             share: this.share,
           })

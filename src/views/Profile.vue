@@ -38,7 +38,7 @@ export default {
     edit() {
       if (!this.active) {
         axios
-          .put("herokuのURL/api/user", {
+          .put("hidden-journey-64474.herokuapp.com/api/user", {
             email: this.$store.state.user.email,
             profile: this.profile,
           })

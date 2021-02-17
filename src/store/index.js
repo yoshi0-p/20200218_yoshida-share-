@@ -29,14 +29,14 @@ export default new Vuex.Store({
   actions: {
     async login({ commit }, { email, password }) {
       const responseLogin = await axios.post(
-        "herokuのURL/api/login",
+        "hidden-journey-64474.herokuapp.com/api/login",
         {
           email: email,
           password: password,
         }
       );
       const responseUser = await axios.get(
-        "herokuのURL/api/user",
+        "hidden-journey-64474.herokuapp.com/api/user",
         {
           params: {
             email: email,
