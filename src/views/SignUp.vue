@@ -3,6 +3,7 @@
     <HeaderAuth />
     <div class="card">
       <p>新規登録</p>
+      <a href="/profile"></a>
       <div class="form">
         <input placeholder="ユーザーネーム" type="text" />
         <input placeholder="プロフィール" type="text" />
