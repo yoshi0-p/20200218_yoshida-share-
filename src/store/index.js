@@ -49,7 +49,7 @@ export default new Vuex.Store({
     },
     logout({ commit }) {
       axios
-        .post("herokuのURL/api/logout", {
+        .post("hidden-journey-64474.herokuapp.com/api/logout", {
           auth: this.state.auth,
         })
         .then((response) => {
