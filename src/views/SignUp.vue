@@ -29,10 +29,11 @@ export default {
   components: {
     HeaderAuth
   },
+
   methods: {
     auth() {
       axios
-        .post("http://hidden-journey-64474.herokuapp.com/api/register", {
+        .post("https://hidden-journey-64474.herokuapp.com/api/register", {
           name: this.name,
           profile: this.profile,
           email: this.email,
