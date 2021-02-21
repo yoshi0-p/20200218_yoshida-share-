@@ -33,7 +33,7 @@ export default {
   methods: {
     auth() {
       axios
-        .post("https://hidden-journey-64474.herokuapp.com/api/register", {
+        .post("https://calm-atoll-21933.herokuapp.com/api/register", {
           name: this.name,
           profile: this.profile,
           email: this.email,
