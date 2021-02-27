@@ -101,10 +101,10 @@ input, select {
 }
 
 html {
-  background-color: #15202b;
+  background-color: #ffffe2;
 }
 * {
-  color: white;
+  color: rgb(0, 0, 0);
   font-family: "Noto Sans JP";
 }
 </style>
