@@ -49,7 +49,7 @@ export default {
   methods: {
      send() {
       axios
-        .post("https://calm-atoll-21933.herokuapp.com/api/comment", {
+        .post("https://calm-atoll-21933.herokuapp.com/api/comment/" +this.id, {
           share_id: this.id,
           user_id: this.$store.state.user.id,
           content: this.content,
