@@ -1,6 +1,6 @@
 <template>
  <div class="header flex">
-   <div class="left">
+   <div class="center">
      <h1>Memo+</h1>
    </div>
    <div class="center flex">
