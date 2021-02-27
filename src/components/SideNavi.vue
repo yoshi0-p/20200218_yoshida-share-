@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class = "frame">
     <div class="left-padding">
       <h1>Memo+</h1>
       <div class="flex icon-field" @click="$router.push('/home')">
@@ -26,6 +26,9 @@ export default {
 </script>
 
 <style scoped>
+.frame{
+  border:black;
+}
 .left-padding {
   margin: 20px;
 }
