@@ -9,7 +9,7 @@
             @click="del(index)"
             alt
             v-if="path && profile"
-          >-Done-</p>
+          >[Done]</p>
         </div>
         <p class="text">{{ value.item.share }}</p>
       </div>
@@ -128,6 +128,7 @@ export default {
 }
 .icon {
   height: 25px;
+  padding-left:10px;
 }
 .detail {
   margin-left: 50px;
