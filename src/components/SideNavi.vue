@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="left-padding">
-      <img class="logo" src="../assets/logo.png" />
+      <h1>Memo+</h1>
       <div class="flex icon-field" @click="$router.push('/home')">
         <p>ホーム</p>
       </div>

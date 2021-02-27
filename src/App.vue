@@ -107,4 +107,10 @@ html {
   color: rgb(0, 0, 0);
   font-family: "Noto Sans JP";
 }
+h1{
+  color:rgb(25, 133, 34);
+  font-size:36px;
+  text-shadow:2px 2px 2px black;
+  padding:10px;
+}
 </style>
