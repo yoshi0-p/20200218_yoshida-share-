@@ -21,6 +21,8 @@ h1{
 }
 .center{
   align-items: center;
+  margin-left:50%;
+  cursor: pointer;
 }
 .right p {
  margin-right: 20px;
@@ -29,10 +31,7 @@ h1{
 .header {
  margin: 20px;
 }
-.logo {
- width: 150px;
- cursor: pointer;
-}
+
 .flex {
  display: flex;
  justify-content: space-between;
