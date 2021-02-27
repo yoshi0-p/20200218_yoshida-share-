@@ -127,7 +127,6 @@ export default {
   display: flex;
 }
 .icon {
-  width: 25px;
   height: 25px;
 }
 .detail {
