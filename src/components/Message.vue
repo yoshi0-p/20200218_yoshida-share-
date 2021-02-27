@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="memo">
     <div v-for="(value, index) in shares" :key="index">
       <div class="message">
         <div class="flex">
@@ -123,6 +123,9 @@ export default {
 </script>
 
 <style scoped>
+.memo{
+  border:black;
+}
 .flex {
   display: flex;
 }
