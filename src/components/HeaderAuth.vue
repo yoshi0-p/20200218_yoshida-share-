@@ -16,7 +16,7 @@
 h1{
   color:rgb(25, 133, 34);
   font-size:36px;
-  text-shadow:2px,2px,black;
+  text-shadow:2px 2px 2px black;
   padding:10px;
 }
 .right {
