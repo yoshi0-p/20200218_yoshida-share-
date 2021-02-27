@@ -4,17 +4,15 @@
       <div class="message">
         <div class="flex">
           <p class="name">{{ value.name }}</p>
-          <img class="icon" src="../assets/heart.png" @click="fav(index)" alt />
+          <img class="icon"  @click="fav(index)" alt >★</p>
           <p class="number">{{ value.like.length }}</p>
-          <img
+          <p
             class="icon"
-            src="../assets/cross.png"
             @click="del(index)"
             alt
             v-if="path && profile"
-          />
-          <img
-            class="icon detail"
+          >×</p>
+          <p
             src="../assets/detail.png"
             @click="
               $router.push({
@@ -24,7 +22,7 @@
             "
             alt
             v-if="profile"
-          />
+          >More</p>
         </div>
         <p class="text">{{ value.item.share }}</p>
       </div>
