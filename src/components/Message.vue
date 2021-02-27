@@ -4,25 +4,12 @@
       <div class="message">
         <div class="flex">
           <p class="name">{{ value.name }}</p>
-          <p class="icon"  @click="fav(index)" alt >★</p>
-          <p class="number">{{ value.like.length }}</p>
           <p
             class="icon"
             @click="del(index)"
             alt
             v-if="path && profile"
-          >×</p>
-          <p
-            src="../assets/detail.png"
-            @click="
-              $router.push({
-                path: '/detail/' + value.item.id,
-                params: { id: value.item.id },
-              })
-            "
-            alt
-            v-if="profile"
-          >More</p>
+          >-Done-</p>
         </div>
         <p class="text">{{ value.item.share }}</p>
       </div>
