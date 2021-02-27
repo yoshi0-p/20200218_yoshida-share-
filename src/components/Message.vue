@@ -12,9 +12,7 @@
           >[Done]</p>
         </div>
         <p class="text">{{ value.item.share }}</p>
-      </div>
-    </div>
-     <div class="comment">
+        <div class="comment">
         <div class="comment-title">
           <p>コメント</p>
         </div>
@@ -31,6 +29,9 @@
           <button>コメント</button>
         </div>
       </div>
+      </div>
+    </div>
+     
   </div>
 </template>
 
@@ -68,44 +69,6 @@ export default {
         .then((response) => {
           this.data = response.data.comment;
         });
-    },
-    fav(index) {
-      const result = this.shares[index].like.some((value) => {
-        return value.user_id == this.$store.state.user.id;
-      });
-      if (result) {
-        this.shares[index].like.forEach((element) => {
-          if (element.user_id == this.$store.state.user.id) {
-            axios({
-              method: "delete",
-              url: "https://calm-atoll-21933.herokuapp.com/api/like",
-              data: {
-                share_id: this.shares[index].item.id,
-                user_id: this.$store.state.user.id,
-              },
-            }).then((response) => {
-              console.log(response);
-              this.$router.go({
-                path: this.$router.currentRoute.path,
-                force: true,
-              });
-            });
-          }
-        });
-      } else {
-        axios
-          .post("https://calm-atoll-21933.herokuapp.com/api/like", {
-            share_id: this.shares[index].item.id,
-            user_id: this.$store.state.user.id,
-          })
-          .then((response) => {
-            console.log(response);
-            this.$router.go({
-              path: this.$router.currentRoute.path,
-              force: true,
-            });
-          });
-      }
     },
     del(index) {
       axios
