@@ -51,9 +51,9 @@ export default {
   margin-top: 15px;
   margin-bottom: 15px;
   border-radius: 10px;
-  border: 1px solid white;
-  background-color: #15202b;
-  color: white;
+  border: 1px solid rgb(0, 134, 11);
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
   resize: none;
 }
 button {
