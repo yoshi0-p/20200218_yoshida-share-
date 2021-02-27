@@ -124,7 +124,7 @@ export default {
 
 <style scoped>
 .memo{
-  border:black;
+  border-color:black;
 }
 .flex {
   display: flex;

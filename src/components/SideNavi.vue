@@ -27,7 +27,7 @@ export default {
 
 <style scoped>
 .frame{
-  border:black;
+  border-color:black;
    background-color: #fdba00;
   height:100%;
 }
