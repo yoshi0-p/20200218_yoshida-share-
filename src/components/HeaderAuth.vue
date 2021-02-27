@@ -1,7 +1,7 @@
 <template>
  <div class="header flex">
    <div class="left">
-     <img class="logo" src="../assets/logo.png"/>
+     <h1>Memo+</h1>
    </div>
    <div class="right flex">
      <p @click="$router.push('/signup')">新規登録</p>
@@ -11,6 +11,10 @@
 </template>
 
 <style scoped>
+h1{
+  color:white;
+  font-size:30px;
+}
 .right {
  align-items: center;
 }
