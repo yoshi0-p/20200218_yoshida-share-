@@ -28,6 +28,7 @@ export default {
 <style scoped>
 .frame{
   border:black;
+   background-color: #fdba00;
 }
 .left-padding {
   margin: 20px;
