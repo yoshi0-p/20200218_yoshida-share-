@@ -13,15 +13,13 @@
 
 <style scoped>
 h1{
-  color:white;
+  color:rgb(25, 133, 34);
   font-size:30px;
 }
 .right {
  align-items: center;
 }
 .center{
-  align-items: center;
-  margin-left:50%;
   cursor: pointer;
 }
 .right p {
