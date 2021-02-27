@@ -4,7 +4,7 @@
       <div class="message">
         <div class="flex">
           <p class="name">{{ value.name }}</p>
-          <img class="icon"  @click="fav(index)" alt >★</p>
+          <p class="icon"  @click="fav(index)" alt >★</p>
           <p class="number">{{ value.like.length }}</p>
           <p
             class="icon"
