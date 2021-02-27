@@ -14,6 +14,23 @@
         <p class="text">{{ value.item.share }}</p>
       </div>
     </div>
+     <div class="comment">
+        <div class="comment-title">
+          <p>コメント</p>
+        </div>
+        <div class="message" v-for="(comment, index) in data" :key="index">
+          <div class="flex">
+            <p class="name">{{ comment.comment_user.name }}</p>
+          </div>
+          <div>
+            <p class="text">{{ comment.comment.content }}</p>
+          </div>
+        </div>
+        <input v-model="content" type="text" />
+        <div @click="send">
+          <button>コメント</button>
+        </div>
+      </div>
   </div>
 </template>
 
@@ -29,6 +46,29 @@ export default {
     };
   },
   methods: {
+     send() {
+      axios
+        .post("https://calm-atoll-21933.herokuapp.com/api/comment", {
+          share_id: this.id,
+          user_id: this.$store.state.user.id,
+          content: this.content,
+        })
+        .then((response) => {
+          console.log(response);
+          this.content = "";
+          this.$router.go({
+            path: this.$router.currentRoute.path,
+            force: true,
+          });
+        });
+    },
+    comment() {
+      axios
+        .get("https://calm-atoll-21933.herokuapp.com/api/shares/" + this.id)
+        .then((response) => {
+          this.data = response.data.comment;
+        });
+    },
     fav(index) {
       const result = this.shares[index].like.some((value) => {
         return value.user_id == this.$store.state.user.id;
@@ -111,6 +151,7 @@ export default {
     },
   },
   created() {
+      this.comment();
     if (this.$route.name === "home") {
       this.path = false;
     }
