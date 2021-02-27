@@ -60,7 +60,7 @@ a {
 /* change colours to suit your needs */
 ins {
     background-color:#ff9;
-    color:#000;
+    color:rgb(255, 251, 217);
     text-decoration:none;
 }
 
