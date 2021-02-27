@@ -15,7 +15,7 @@
 <style scoped>
 h1{
   color:rgb(25, 133, 34);
-  font-size:30px;
+  font-size:36px;
 }
 .right {
  align-items: center;
