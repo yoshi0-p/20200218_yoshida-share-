@@ -29,6 +29,7 @@ export default {
 .frame{
   border:black;
    background-color: #fdba00;
+  height:100%;
 }
 .left-padding {
   margin: 20px;
