@@ -120,7 +120,7 @@ export default {
         .then((response) => {
           this.data = response.data.comment;
         });
-    },
+    }
   },
   created() {
       this.comment();
