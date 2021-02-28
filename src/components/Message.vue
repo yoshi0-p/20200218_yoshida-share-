@@ -29,6 +29,26 @@
         <p class="text">{{ value.item.share }}</p>
       </div>
     </div>
+    
+    <div class="comment">
+        <div class="comment-title">
+          <p>コメント</p>
+        </div>
+        <div class="message" v-for="(comment, index) in data" :key="index">
+          <div class="flex">
+            <p class="name">{{ comment.comment_user.name }}</p>
+          </div>
+          <div>
+            <p class="text">{{ comment.comment.content }}</p>
+          </div>
+        </div>
+        <p>{{id}}</p>
+        <input v-model="content" type="text" />
+        <div @click="send">
+          <button>コメント</button>
+        </div>
+      </div>
+      
   </div>
 </template>
 
