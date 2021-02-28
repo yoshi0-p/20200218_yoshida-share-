@@ -12,7 +12,9 @@
           >[Done]</p>
         </div>
         <p class="text">{{ value.item.share }}</p>
-        <div class="comment">
+       
+      </div>
+       <div class="comment">
         <div class="comment-title">
           <p>コメント</p>
         </div>
@@ -29,7 +31,6 @@
         <div @click="send">
           <button>コメント</button>
         </div>
-      </div>
       </div>
     </div>
      
