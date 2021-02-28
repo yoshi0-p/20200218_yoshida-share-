@@ -85,7 +85,7 @@ export default {
     del(index) {
       axios
         .delete(
-          "herokuのURL/api/shares/" +
+          "https://calm-atoll-21933.herokuapp.com/api/shares/" +
             this.shares[index].item.id
         )
         .then((response) => {
@@ -99,12 +99,12 @@ export default {
     async getShares() {
       let data = [];
       const shares = await axios.get(
-        "herokuのURL/api/shares"
+        "https://calm-atoll-21933.herokuapp.com/api/shares"
       );
       for (let i = 0; i < shares.data.data.length; i++) {
         await axios
           .get(
-            "herokuのURL/api/shares/" +
+            "https://calm-atoll-21933.herokuapp.com/api/shares/" +
               shares.data.data[i].id
           )
           .then((response) => {
