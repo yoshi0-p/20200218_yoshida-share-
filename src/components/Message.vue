@@ -114,6 +114,13 @@ export default {
       this.shares = data;
       console.log(this.shares);
     },
+    comment() {
+      axios
+        .get("https://calm-atoll-21933.herokuapp.com/api/shares/" + this.id)
+        .then((response) => {
+          this.data = response.data.comment;
+        });
+    },
   },
   created() {
       this.comment();
