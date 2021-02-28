@@ -24,6 +24,7 @@
             <p class="text">{{ comment.comment.content }}</p>
           </div>
         </div>
+         <p>{{id}}</p>
         <input v-model="content" type="text" />
         <div @click="send">
           <button>コメント</button>
