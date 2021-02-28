@@ -1,39 +1,34 @@
 <template>
-  <div class="memo">
+  <div>
     <div v-for="(value, index) in shares" :key="index">
       <div class="message">
         <div class="flex">
           <p class="name">{{ value.name }}</p>
-          <p
+          <img class="icon" src="../assets/heart.png" @click="fav(index)" alt />
+          <p class="number">{{ value.like.length }}</p>
+          <img
             class="icon"
+            src="../assets/cross.png"
             @click="del(index)"
             alt
             v-if="path && profile"
-          >[Done]</p>
+          />
+          <img
+            class="icon detail"
+            src="../assets/detail.png"
+            @click="
+              $router.push({
+                path: '/detail/' + value.item.id,
+                params: { id: value.item.id },
+              })
+            "
+            alt
+            v-if="profile"
+          />
         </div>
         <p class="text">{{ value.item.share }}</p>
-       
-      </div>
-       <div class="comment">
-        <div class="comment-title">
-          <p>コメント</p>
-        </div>
-        <div class="message" v-for="(comment, index) in data" :key="index">
-          <div class="flex">
-            <p class="name">{{ comment.comment_user.name }}</p>
-          </div>
-          <div>
-            <p class="text">{{ comment.comment.content }}</p>
-          </div>
-        </div>
-         <p>{{id}}</p>
-        <input v-model="content" type="text" />
-        <div @click="send">
-          <button>コメント</button>
-        </div>
       </div>
     </div>
-     
   </div>
 </template>
 
@@ -49,33 +44,48 @@ export default {
     };
   },
   methods: {
-     send() {
-      axios
-        .post("https://calm-atoll-21933.herokuapp.com/api/comment/", {
-          share_id: this.id,
-          user_id: this.$store.state.user.id,
-          content: this.content,
-        })
-        .then((response) => {
-          console.log(response);
-          this.content = "";
-          this.$router.go({
-            path: this.$router.currentRoute.path,
-            force: true,
+    fav(index) {
+      const result = this.shares[index].like.some((value) => {
+        return value.user_id == this.$store.state.user.id;
+      });
+      if (result) {
+        this.shares[index].like.forEach((element) => {
+          if (element.user_id == this.$store.state.user.id) {
+            axios({
+              method: "delete",
+              url: "herokuのURL/api/like",
+              data: {
+                share_id: this.shares[index].item.id,
+                user_id: this.$store.state.user.id,
+              },
+            }).then((response) => {
+              console.log(response);
+              this.$router.go({
+                path: this.$router.currentRoute.path,
+                force: true,
+              });
+            });
+          }
+        });
+      } else {
+        axios
+          .post("herokuのURL/api/like", {
+            share_id: this.shares[index].item.id,
+            user_id: this.$store.state.user.id,
+          })
+          .then((response) => {
+            console.log(response);
+            this.$router.go({
+              path: this.$router.currentRoute.path,
+              force: true,
+            });
           });
-        });
-    },
-    comment() {
-      axios
-        .get("https://calm-atoll-21933.herokuapp.com/api/shares/" + this.id)
-        .then((response) => {
-          this.data = response.data.comment;
-        });
+      }
     },
     del(index) {
       axios
         .delete(
-          "https://calm-atoll-21933.herokuapp.com/api/shares/" +
+          "herokuのURL/api/shares/" +
             this.shares[index].item.id
         )
         .then((response) => {
@@ -89,12 +99,12 @@ export default {
     async getShares() {
       let data = [];
       const shares = await axios.get(
-        "https://calm-atoll-21933.herokuapp.com/api/shares"
+        "herokuのURL/api/shares"
       );
       for (let i = 0; i < shares.data.data.length; i++) {
         await axios
           .get(
-            "https://calm-atoll-21933.herokuapp.com/api/shares/" +
+            "herokuのURL/api/shares/" +
               shares.data.data[i].id
           )
           .then((response) => {
@@ -110,22 +120,12 @@ export default {
               data.push(response.data);
             }
           });
-           comment() {
-      axios
-        .get("https://calm-atoll-21933.herokuapp.com/api/shares/" + this.id)
-        .then((response) => {
-          this.data = response.data.comment;
-        });
-    },
       }
       this.shares = data;
       console.log(this.shares);
     },
- 
-     
   },
   created() {
-      this.comment();
     if (this.$route.name === "home") {
       this.path = false;
     }
@@ -138,15 +138,12 @@ export default {
 </script>
 
 <style scoped>
-.memo{
-  border-color:black;
-}
 .flex {
   display: flex;
 }
 .icon {
+  width: 25px;
   height: 25px;
-  padding-left:10px;
 }
 .detail {
   margin-left: 50px;
