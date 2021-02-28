@@ -28,7 +28,7 @@
         </div>
         <p class="text">{{ value.item.share }}</p>
       </div>
-    </div>
+   
     
     <div class="comment">
         <div class="comment-title">
@@ -49,6 +49,7 @@
         </div>
       </div>
       
+   </div>
   </div>
 </template>
 
