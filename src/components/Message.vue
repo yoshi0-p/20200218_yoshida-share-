@@ -48,7 +48,7 @@
           <button>コメント</button>
         </div>
       </div>
-      
+
    </div>
   </div>
 </template>
@@ -195,8 +195,9 @@ export default {
 }
 .message {
   padding: 20px;
-  border-bottom: solid 1px white;
-  border-left: solid 1px white;
+  border-bottom: solid 1px green;
+  border-left: solid 1px green;
+
 }
 .name {
   font-size: 18px;
