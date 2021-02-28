@@ -110,17 +110,19 @@ export default {
               data.push(response.data);
             }
           });
-      }
-      this.shares = data;
-      console.log(this.shares);
-    },
-    comment() {
+           comment() {
       axios
         .get("https://calm-atoll-21933.herokuapp.com/api/shares/" + this.id)
         .then((response) => {
           this.data = response.data.comment;
         });
-    }
+    },
+      }
+      this.shares = data;
+      console.log(this.shares);
+    },
+ 
+     
   },
   created() {
       this.comment();
