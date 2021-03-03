@@ -5,7 +5,8 @@
     </div>
     <div class="right">
       <div class="title">
-        <p>ホーム</p>
+        <p>最新５件のメモ
+        </p>
       </div>
       <Message />
     </div>
