@@ -48,6 +48,7 @@ export default {
   data() {
     return {
       shares: [],
+      comment: [],
       path: true,
       profile: true,
     };
@@ -61,8 +62,8 @@ export default {
 
   methods: {
     
-    comment(){
-    for(let i = 0; i < shares.data.data.length; i++){
+    comment(i){
+    for(let i = 0; i < comment.data.data.length; i++){
       axios
         .get("https://calm-atoll-21933.herokuapp.com/api/shares/" + i)
         .then((response) => {
