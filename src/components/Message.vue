@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-for="(value,index) in reverseIndex" :key="index">
+    <div v-for="(value,index) in shares" :key="index">
       <div class="message">
         <div class="flex">
           <p class="name">{{ value.name }}</p>
@@ -25,6 +25,16 @@
           >[More]</p>
         </div>
         <p class="text">{{ value.item.share }}</p>
+
+        <div class="message" v-for="(comment, index) in data" :key="index">
+          <div class="flex">
+            <p class="name">{{ comment.comment_user.name }}</p>
+          </div>
+          <div>
+            <p class="text">{{ comment.comment.content }}</p>
+          </div>
+        </div>
+
       </div>
   
    </div>
@@ -50,6 +60,17 @@ export default {
   },
 
   methods: {
+    
+    comment(){
+    for(let i = 0; i < shares.data.data.length; i++){
+      axios
+        .get("https://calm-atoll-21933.herokuapp.com/api/shares/" + i)
+        .then((response) => {
+          this.data = response.data.comment;
+        });
+      };
+   },
+
      send() {
       axios
         .post("https://calm-atoll-21933.herokuapp.com/api/comment", {
@@ -66,13 +87,7 @@ export default {
           });
         });
     },
-    comment() {
-      axios
-        .get("https://calm-atoll-21933.herokuapp.com/api/shares/" + this.id)
-        .then((response) => {
-          this.data = response.data.comment;
-        });
-    },
+  
     fav(index) {
       const result = this.shares[index].like.some((value) => {
         return value.user_id == this.$store.state.user.id;
@@ -155,7 +170,8 @@ export default {
     },
   },
   created() {
-    this.comment();
+   this.comment();
+    
     if (this.$route.name === "home") {
       this.path = false;
     }
