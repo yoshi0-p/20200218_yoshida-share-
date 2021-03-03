@@ -67,7 +67,7 @@ export default {
       axios
         .get("https://calm-atoll-21933.herokuapp.com/api/shares/" + i)
         .then((response) => {
-          this.data = response.data.comment;
+          this.comment.data = response.data.comment;
         });
       };
    },
