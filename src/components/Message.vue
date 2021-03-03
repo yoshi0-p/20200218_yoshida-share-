@@ -1,15 +1,15 @@
 <template>
   <div>
-    <div v-for="(value,reverseIndex) of 5" :key="reverseIndex">
+    <div v-for="(value,index) in reverseIndex" :key="index">
       <div class="message">
         <div class="flex">
           <p class="name">{{ value.name }}</p>
-          <p class="icon" @click="fav(reverseIndex)" >★</p>
+          <p class="icon" @click="fav(index)" >★</p>
           <p class="number">{{ value.like.length }}</p>
           <img
             class="icon"
             src="../assets/cross.png"
-            @click="del(reverseIndex)"
+            @click="del(index)"
             alt
             v-if="path && profile"
           />
@@ -47,7 +47,7 @@ export default {
 
   computed: {
     reverseIndex() {
-      return this.index.slice().reverse();
+      return this.shares.slice().reverse();
     },
   },
 
