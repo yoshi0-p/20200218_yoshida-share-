@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-for="(value,reverseIndex) in 5" :key="reverseIndex">
+    <div v-for="(value,reverseIndex) of 5" :key="reverseIndex">
       <div class="message">
         <div class="flex">
           <p class="name">{{ value.name }}</p>

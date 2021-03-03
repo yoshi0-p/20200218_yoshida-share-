@@ -3,7 +3,7 @@
     <div class="left-padding">
       <h1>Memo+</h1>
       <div class="flex icon-field" @click="$router.push('/home')">
-        <p>最新５件のシェア</p>
+        <p>ホーム</p>
       </div>
       <div class="flex icon-field" @click="$router.push('/profile')">
         <p>プロフィール</p>
