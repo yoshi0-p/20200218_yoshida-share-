@@ -64,7 +64,7 @@ export default {
 
       comment() {
       axios
-        .get("https://calm-atoll-21933.herokuapp.com/api/shares/" + this.id)
+        .get("https://calm-atoll-21933.herokuapp.com/api/shares/" + value.item.id)
         .then((response) => {
           this.data = response.data.comment;
         });
