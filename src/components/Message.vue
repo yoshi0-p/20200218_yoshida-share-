@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-for="(value, index) in shares" :key="index">
+    <div v-for="(value,index) in reverseIndex" :key="index">
       <div class="message">
         <div class="flex">
           <p class="name">{{ value.name }}</p>
@@ -28,27 +28,7 @@
         </div>
         <p class="text">{{ value.item.share }}</p>
       </div>
-   
-    
-    <div class="comment">
-        <div class="comment-title">
-          <p>コメント</p>
-        </div>
-        <div class="message" v-for="(comment, index) in data" :key="index">
-          <div class="flex">
-            <p class="name">{{ comment.comment_user.name }}</p>
-          </div>
-          <div>
-            <p class="text">{{ comment.comment.content }}</p>
-          </div>
-        </div>
-        <p>{{id}}</p>
-        <input v-model="content" type="text" />
-        <div @click="send">
-          <button>コメント</button>
-        </div>
-      </div>
-
+  
    </div>
   </div>
 </template>
@@ -64,6 +44,13 @@ export default {
       profile: true,
     };
   },
+
+  computed: {
+    reverseIndex() {
+      return this.shares.slice().reverse();
+    },
+  },
+
   methods: {
      send() {
       axios
@@ -97,7 +84,7 @@ export default {
           if (element.user_id == this.$store.state.user.id) {
             axios({
               method: "delete",
-              url: "herokuのURL/api/like",
+              url: "https://calm-atoll-21933.herokuapp.com/api/api/like",
               data: {
                 share_id: this.shares[index].item.id,
                 user_id: this.$store.state.user.id,
@@ -113,7 +100,7 @@ export default {
         });
       } else {
         axios
-          .post("herokuのURL/api/like", {
+          .post("https://calm-atoll-21933.herokuapp.com/api/api/like", {
             share_id: this.shares[index].item.id,
             user_id: this.$store.state.user.id,
           })
