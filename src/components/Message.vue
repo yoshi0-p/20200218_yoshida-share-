@@ -4,17 +4,15 @@
       <div class="message">
         <div class="flex">
           <p class="name">{{ value.name }}</p>
-          <p class="icon" @click="fav(index)" >★</p>
+          <p class="icon" @click="fav(index)" >[★]</p>
           <p class="number">{{ value.like.length }}</p>
-          <img
+          <p
             class="icon"
-            src="../assets/cross.png"
             @click="del(index)"
             alt
             v-if="path && profile"
-          />
-          <img
-            class="icon detail"
+          >[×]</p>
+          <p
             src="../assets/detail.png"
             @click="
               $router.push({
@@ -24,7 +22,7 @@
             "
             alt
             v-if="profile"
-          />
+          >[More]</p>
         </div>
         <p class="text">{{ value.item.share }}</p>
       </div>
@@ -84,7 +82,7 @@ export default {
           if (element.user_id == this.$store.state.user.id) {
             axios({
               method: "delete",
-              url: "https://calm-atoll-21933.herokuapp.com/api/api/like",
+              url: "https://calm-atoll-21933.herokuapp.com/api/like",
               data: {
                 share_id: this.shares[index].item.id,
                 user_id: this.$store.state.user.id,
@@ -100,7 +98,7 @@ export default {
         });
       } else {
         axios
-          .post("https://calm-atoll-21933.herokuapp.com/api/api/like", {
+          .post("https://calm-atoll-21933.herokuapp.com/api/like", {
             share_id: this.shares[index].item.id,
             user_id: this.$store.state.user.id,
           })
