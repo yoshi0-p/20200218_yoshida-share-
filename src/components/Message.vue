@@ -26,7 +26,14 @@
         </div>
         <p class="text">{{ value.item.share }}</p>
 
-       
+       <div class="message" v-for="(comment, index) in data" :key="index">
+          <div class="flex">
+            <p class="name">{{ comment.comment_user.name }}</p>
+          </div>
+          <div>
+            <p class="text">{{ comment.comment.content }}</p>
+          </div>
+        </div>
 
       </div>
   
@@ -41,7 +48,7 @@ export default {
   data() {
     return {
       shares: [],
-      comment: [],
+      data: [],
       path: true,
       profile: true,
     };
@@ -54,6 +61,14 @@ export default {
   },
 
   methods: {
+
+      comment() {
+      axios
+        .get("https://calm-atoll-21933.herokuapp.com/api/shares/" + this.id)
+        .then((response) => {
+          this.data = response.data.comment;
+        });
+    },
 
      send() {
       axios
@@ -155,6 +170,9 @@ export default {
   },
   created() {
   
+
+    this.comment();
+
     if (this.$route.name === "home") {
       this.path = false;
     }
