@@ -63,7 +63,7 @@ export default {
   methods: {
     
     comment(){
-    for(let i = 0; i < comment.data.data.length; i++){
+    for(let i = 0; i < 3; i++){
       axios
         .get("https://calm-atoll-21933.herokuapp.com/api/shares/" + i)
         .then((response) => {
