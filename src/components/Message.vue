@@ -39,7 +39,6 @@ export default {
   data() {
     return {
       shares: [],
-      comment:[],
       path: true,
       profile: true,
     };
@@ -159,6 +158,7 @@ export default {
           });
       }
       this.shares = data;
+      this.comment;
       console.log(this.shares);
     },
   },
