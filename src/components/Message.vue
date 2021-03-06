@@ -1,14 +1,14 @@
 <template>
   <div>
-    <div v-for="(value,index) in reverseIndex" :key="index">
+    <div v-for="(value) in reverseIndex" :key="value.id">
       <div class="message">
         <div class="flex">
           <p class="name">{{ value.name }}</p>
-          <p class="icon" @click="fav(reverseCount(index))" >[★]</p>
+          <p class="icon" @click="fav(value.id)" >[★]</p>
           <p class="number">{{ value.like.length }}</p>
           <p
             class="icon"
-            @click="del(reverseCount(index))"
+            @click="del(value.id)"
             alt
             v-if="path && profile"
           >[×]</p>
