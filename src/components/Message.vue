@@ -1,14 +1,14 @@
 <template>
   <div>
-    <div v-for="(value) in reverseIndex" :key="value.id">
+    <div v-for="(value,index) in reverseIndex" :key="index">
       <div class="message">
         <div class="flex">
           <p class="name">{{ value.name }}</p>
-          <p class="icon" @click="fav(value.id)" >[★]</p>
+          <p class="icon" @click="fav(index)" >[★]</p>
           <p class="number">{{ value.like.length }}</p>
           <p
             class="icon"
-            @click="del(value.id)"
+            @click="del(index)"
             alt
             v-if="path && profile"
           >[×]</p>
@@ -62,9 +62,7 @@ export default {
   }, 
 
   methods: {
-     reverseCount(index){
-      return this.shares.length - index + 1;
-    },
+     
    
      send() {
       axios
