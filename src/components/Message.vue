@@ -4,11 +4,11 @@
       <div class="message">
         <div class="flex">
           <p class="name">{{ value.name }}</p>
-          <p class="icon" @click="fav(index)" >[★]</p>
+          <p class="icon" @click="fav(reverseCount(index))" >[★]</p>
           <p class="number">{{ value.like.length }}</p>
           <p
             class="icon"
-            @click="del(index)"
+            @click="del(reverseCount(index))"
             alt
             v-if="path && profile"
           >[×]</p>
@@ -57,6 +57,9 @@ export default {
     reverseIndex() {
       return this.shares.slice().reverse();
     },
+    reverseCount(a){
+      return this.shares.length - a + 1;
+    }
 
   }, 
 
