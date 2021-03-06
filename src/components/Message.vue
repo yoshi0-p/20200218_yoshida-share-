@@ -57,14 +57,14 @@ export default {
     reverseIndex() {
       return this.shares.slice().reverse();
     },
-    reverseCount(a){
-      return this.shares.length - a + 1;
-    }
+   
 
   }, 
 
   methods: {
-    
+     reverseCount(a){
+      return this.shares.length - a + 1;
+    },
    
      send() {
       axios
