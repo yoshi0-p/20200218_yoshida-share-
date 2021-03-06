@@ -154,7 +154,7 @@ export default {
      comment() {
         for(let x = 0; x <this.shares.length; x++){
         axios
-        .get("https://calm-atoll-21933.herokuapp.com/api/shares/" + share[x].id)
+        .get("https://calm-atoll-21933.herokuapp.com/api/shares/" + shares[x].id)
         .then((response) => {
           this.shares[x].comment = response.data.comment;
         });  
