@@ -53,11 +53,11 @@ export default {
     };
   },
 
-  /*computed: {
+  computed: {
     reverseIndex() {
       return this.shares.slice().reverse();
     },
-  }, */
+  }, 
 
   methods: {
     
