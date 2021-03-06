@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-for="(value,index) in reverseIndex" :key="index">
+    <div v-for="(value,index) in shares" :key="index">
       <div class="message">
         <div class="flex">
           <p class="name">{{ value.name }}</p>
@@ -147,14 +147,14 @@ export default {
           .then((response) => {
             if (this.$route.name == "profile") {
               if (response.data.item.user_id == this.$store.state.user.id) {
-                data.push(response.data);
+                data.unshift(response.data);
               }
             } else if (this.$route.name == "detail") {
               if (response.data.item.id == this.id) {
-                data.push(response.data);
+                data.unshift(response.data);
               }
             } else {
-              data.push(response.data);
+              data.punshift(response.data);
 
             }
           });
