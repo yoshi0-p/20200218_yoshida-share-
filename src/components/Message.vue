@@ -44,11 +44,11 @@ export default {
     };
   },
 
-  computed: {
+  /*computed: {
     reverseIndex() {
       return this.shares.slice().reverse();
     },
-  },
+  }, */
 
   methods: {
     
@@ -57,7 +57,7 @@ export default {
         axios
         .get("https://calm-atoll-21933.herokuapp.com/api/shares/" + share[x].id)
         .then((response) => {
-          this.share[x].comment = response.data.comment;
+          this.shares[x].comment = response.data.comment;
         });  
         }
       
