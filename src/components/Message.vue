@@ -25,7 +25,16 @@
           >[More]</p>
         </div>
         <p class="text">{{ value.item.share }}</p>
-      <p>{{value.comment.content}}</p> 
+
+      <div class="message" v-for="(comments, index) in value" :key="index">
+          <div class="flex">
+            <p class="name">{{ comments.comment_user.name }}</p>
+          </div>
+          <div>
+            <p class="text">{{ comments.comment.content }}</p>
+          </div>
+        </div>
+
       </div>
   
    </div>
