@@ -25,7 +25,7 @@
           >[More]</p>
         </div>
         <p class="text">{{ value.item.share }}</p>
-        <p>{{value.item.comment.content}}</p>
+       <!-- <p>{{value.item.comment.content}}</p> -->
       </div>
   
    </div>
