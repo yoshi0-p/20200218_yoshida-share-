@@ -163,7 +163,6 @@ export default {
       this.profile = false;
     }
     this.getShares();
-    this.comment;
   },
 };
 </script>
