@@ -25,16 +25,7 @@
           >[More]</p>
         </div>
         <p class="text">{{ value.item.share }}</p>
-
-       <div class="message" v-for="(comment, index) in data" :key="index">
-          <div class="flex">
-            <p class="name">{{ comment.comment_user.name }}</p>
-          </div>
-          <div>
-            <p class="text">{{ comment.comment.content }}</p>
-          </div>
-        </div>
-
+        <p>{{value.item.comment}}</p>
       </div>
   
    </div>
@@ -48,7 +39,7 @@ export default {
   data() {
     return {
       shares: [],
-      data: [],
+      comment:[],
       path: true,
       profile: true,
     };
@@ -61,13 +52,16 @@ export default {
   },
 
   methods: {
-
+    
       comment() {
-      axios
-        .get("https://calm-atoll-21933.herokuapp.com/api/shares/" + this.id)
+        for(let x = 0; x <share.length; x++){
+        axios
+        .get("https://calm-atoll-21933.herokuapp.com/api/shares/" + share[x].id)
         .then((response) => {
-          this.data[this.id] = response.data.comment;
-        });
+          this.share[x].comment = response.data.comment;
+        });  
+        }
+      
     },
 
      send() {
@@ -170,9 +164,6 @@ export default {
   },
   created() {
   
-
-    this.comment();
-
     if (this.$route.name === "home") {
       this.path = false;
     }
