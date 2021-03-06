@@ -4,11 +4,11 @@
       <div class="message">
         <div class="flex">
           <p class="name">{{ value.name }}</p>
-          <p class="icon" @click="fav(this.shares.length - index + 1)" >[★]</p>
+          <p class="icon" @click="fav(index)" >[★]</p>
           <p class="number">{{ value.like.length }}</p>
           <p
             class="icon"
-            @click="del(this.shares.length - index + 1)"
+            @click="del(index)"
             alt
             v-if="path && profile"
           >[×]</p>
