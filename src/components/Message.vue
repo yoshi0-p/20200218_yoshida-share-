@@ -52,17 +52,7 @@ export default {
 
   methods: {
     
-      comment() {
-        for(let x = 0; x <share.length; x++){
-        axios
-        .get("https://calm-atoll-21933.herokuapp.com/api/shares/" + share[x].id)
-        .then((response) => {
-          this.shares[x].comment = response.data.comment;
-        });  
-        }
-      
-    },
-
+   
      send() {
       axios
         .post("https://calm-atoll-21933.herokuapp.com/api/comment", {
@@ -158,9 +148,19 @@ export default {
           });
       }
       this.shares = data;
-      this.comment;
       console.log(this.shares);
     },
+
+     comment() {
+        for(let x = 0; x <this.shares.length; x++){
+        axios
+        .get("https://calm-atoll-21933.herokuapp.com/api/shares/" + share[x].id)
+        .then((response) => {
+          this.shares[x].comment = response.data.comment;
+        });  
+        }
+    },
+
   },
   created() {
   
@@ -171,6 +171,7 @@ export default {
       this.profile = false;
     }
     this.getShares();
+    this.comment;
   },
 };
 </script>
