@@ -62,8 +62,8 @@ export default {
   }, 
 
   methods: {
-     reverseCount(a){
-      return this.shares.length - a + 1;
+     reverseCount(index){
+      return this.shares.length - index + 1;
     },
    
      send() {
