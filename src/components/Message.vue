@@ -38,8 +38,6 @@
         <div @click="send(index)">
           <button>コメント</button>
         </div> -->
-
-      </div>
   
    </div>
   </div>
