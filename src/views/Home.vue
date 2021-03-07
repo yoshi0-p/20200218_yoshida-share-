@@ -1,5 +1,5 @@
 <template>
-  <div class="flex">
+
       <SideNavi />
    
       <div class="title">
@@ -7,7 +7,7 @@
         </p>
       </div>
       <Message />
-  </div>
+
 </template>
 
 <script>
