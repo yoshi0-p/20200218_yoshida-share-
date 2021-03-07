@@ -208,7 +208,7 @@ export default {
 .message {
   margin: 20px;
   background-color:rgb(255, 144, 231);
-  width:30vw;
+  width:30%;
   border-bottom: solid 1px red;
   border-left: solid 1px red;
 
@@ -230,7 +230,7 @@ export default {
   margin-left:50px;
   padding:20px;
   background-color:rgb(144, 229, 255);
-  width:30vw;
+  width:30%;
   border-bottom: solid 1px aquamarine;
   border-left: solid 1px aquamarine;
 
