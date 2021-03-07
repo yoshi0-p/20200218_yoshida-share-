@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-for="(value,index) of 3 in shares" :key="index">
+    <div v-for="(value,index) in shares" :key="index">
       <div class="message">
         <div class="flex">
           <p class="name">{{ value.name }}</p>
