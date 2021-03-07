@@ -47,13 +47,13 @@ export default {
 .share {
   width:100%;
   display:flex;
-  vertical-align: middle;
+  
   height: 75px;
 }
 .share textarea {
-  
+  vertical-align: middle;
   padding-left:20px;
-  height:70px;
+  height:60px;
   vertical-align: middle;
   width:50%;
   border: 1px solid rgb(0, 134, 11);
