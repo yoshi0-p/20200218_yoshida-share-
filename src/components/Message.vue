@@ -23,12 +23,18 @@
             alt
             v-if="profile"
           >[More]</p>
-        </div>
-        <p class="text">{{ value.item.share }}</p>
-       <input v-model="content" type="text" />
+
+           <div class="comment-box">
+         <input v-model="content" type="text" />
         <div @click="send(index)">
           <button>コメント</button>
         </div> 
+        </div>
+
+        </div>
+        <p class="text">{{ value.item.share }}</p>
+      
+       
 
          <div class="comment" v-for="(comments, index) in value.comment" :key="index">
            <div class="flex">
@@ -181,6 +187,10 @@ export default {
 .flex {
   display: flex;
 }
+.comment-box{
+  display:flex;
+}
+
 .icon {
   width: 25px;
   height: 25px;
