@@ -24,6 +24,8 @@ export default {
   border-color:black;
    background-color: #977003;
   width:100%;
+  height:40px;
+  display:flex;
 }
 
 .icon-field {

@@ -50,7 +50,7 @@ export default {
 }
 .share textarea {
   width: 95%;
-  height: 120px;
+  height: 40px;
   margin-top: 15px;
   margin-bottom: 15px;
   border-radius: 10px;
