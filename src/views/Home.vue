@@ -1,8 +1,6 @@
 <template>
     <div>
-      <div id="navi"><SideNavi /></div>
-     
-   
+      <div id="navi"><HeaderMenu /></div>
       <div class="title">
         <p>最新５件のメモ
         </p>
@@ -14,11 +12,11 @@
 </template>
 
 <script>
-import SideNavi from "../components/SideNavi";
+import HeaderMenu from "../components/HeaderMenu";
 import Message from "../components/Message";
 export default {
   components: {
-    SideNavi,
+    HeaderMenu,
     Message
   }
 };
