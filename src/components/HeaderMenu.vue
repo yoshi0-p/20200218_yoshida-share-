@@ -28,7 +28,10 @@ export default {
   display:flex;
   white-space: nowrap;
 }
-h1, .logout{
+h1{
+  line-height: 75px;
+}
+.logout{
   line-height: 75px;
 }
 
