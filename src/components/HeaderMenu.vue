@@ -25,6 +25,7 @@ export default {
   width:100%;
   height:75px;
   display:flex;
+  white-space: nowrap;
 }
 
 .logout{
