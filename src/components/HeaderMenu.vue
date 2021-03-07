@@ -18,12 +18,16 @@ export default {
 </script>
 
 <style scoped>
+
 .frame{
   border-color:black;
    background-color: #977003;
   width:100%;
   height:40px;
   display:flex;
+}
+h1{
+  height:100px;
 }
 
 
