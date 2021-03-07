@@ -21,9 +21,10 @@ export default {
 
 .frame{
   border-color:black;
-   background-color: #977003;
+  background-color: #977003;
   width:100%;
-  height:40px;
+  height:75px;
+  justify-content: center;
   display:flex;
   white-space: nowrap;
 }
