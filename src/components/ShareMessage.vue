@@ -2,7 +2,7 @@
   <div class="share">
     <textarea v-model="share"></textarea>
     <div @click="send">
-      <button>シェアする</button>
+      <button>POST THIS</button>
     </div>
   </div>
 </template>
