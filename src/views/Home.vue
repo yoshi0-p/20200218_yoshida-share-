@@ -1,8 +1,6 @@
 <template>
   <div class="flex">
-    <div class="left">
       <SideNavi />
-    </div>
     <div class="right">
       <div class="title">
         <p>最新５件のメモ
@@ -25,10 +23,7 @@ export default {
 </script>
 
 <style scoped>
-.left {
-  width: 22%;
-  height: 100vh;
-}
+
 .right {
   width: 78%;
   height: 100vh;
