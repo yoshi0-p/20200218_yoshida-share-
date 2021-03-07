@@ -2,7 +2,7 @@
   <div class = "frame">
       <h1>付箋ボード</h1>
       <div  class="logout" @click="$store.dispatch('logout')">
-        <p>ログアウト</p>
+        <p>｜ログアウト｜</p>
       </div>
     <ShareMessage />
   </div>
