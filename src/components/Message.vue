@@ -25,7 +25,6 @@
           >[More]</p>
         </div>
         <p class="text">{{ value.item.share }}</p>
-　　　　
          <div class="message" v-for="(comments, index) in value.comment" :key="index">
            <div class="flex">
             <p class="name">{{ comments.comment_user.name }}</p>
