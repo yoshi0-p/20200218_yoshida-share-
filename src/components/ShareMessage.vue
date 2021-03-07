@@ -49,10 +49,8 @@ export default {
   display:flex;
 }
 .share textarea {
+  width:50%;
   height: 40px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  border-radius: 10px;
   border: 1px solid rgb(0, 134, 11);
   background-color: #ffffff;
   color: rgb(0, 0, 0);
@@ -60,11 +58,9 @@ export default {
 }
 button {
   width: 100px;
-  text-align: center;
   padding: 8px 0 10px;
   color: #fff;
-  background-color: #5419da;
-  border-radius: 25px;
+  background-color: #000000;
   display: block;
   margin: 0 0 0 auto;
 }
