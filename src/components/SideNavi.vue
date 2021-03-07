@@ -32,9 +32,6 @@ export default {
   cursor: pointer;
   display:flex;
 }
-.icon {
-  width: 25px;
-}
 .icon-field p {
   font-size: 16px;
   padding-left: 15px;
