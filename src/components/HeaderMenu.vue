@@ -25,10 +25,9 @@ export default {
   width:100%;
   height:40px;
   display:flex;
+  white-space: nowrap;
 }
-h1{
-  height:100px;
-}
+
 
 
 </style>
