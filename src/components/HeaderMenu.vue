@@ -1,7 +1,7 @@
 <template>
   <div class = "frame">
       <h1>付箋ボード</h1>
-      <div  @click="$store.dispatch('logout')">
+      <div  class="logout" @click="$store.dispatch('logout')">
         <p>ログアウト</p>
       </div>
     <ShareMessage />
@@ -27,6 +27,9 @@ export default {
   justify-content: center;
   display:flex;
   white-space: nowrap;
+}
+h1, .logout{
+  line-height: 75px;
 }
 
 
