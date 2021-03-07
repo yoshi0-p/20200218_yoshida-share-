@@ -51,7 +51,8 @@ export default {
 }
 .share textarea {
   
-  height: 70px;
+  height: 60px;
+  width:50%;
   border: 1px solid rgb(0, 134, 11);
   background-color: #ffffff;
   color: rgb(0, 0, 0);
