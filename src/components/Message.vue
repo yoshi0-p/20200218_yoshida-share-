@@ -227,7 +227,7 @@ export default {
 }
 .comment {
   margin: 20px;
-  margin-left:50px;
+  margin-left:30px;
   padding:20px;
   background-color:rgb(144, 229, 255);
   width:30%;
