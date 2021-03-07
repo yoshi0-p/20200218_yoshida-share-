@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-for="(value,index) in shares" :key="index">
+    <div v-for="(value,index) of 3 in shares" :key="index">
       <div class="message">
         <div class="flex">
           <p class="name">{{ value.name }}</p>
@@ -25,7 +25,13 @@
           >[More]</p>
         </div>
         <p class="text">{{ value.item.share }}</p>
-
+　　　　
+      <div>
+      <input v-model="content" type="text" />
+        <div @click="send(index)">
+          <button>コメント</button>
+        </div>
+        </div>
       <div class="message" v-for="(comments, index) in value.comment" :key="index">
           <div class="flex">
             <p class="name">{{ comments.comment_user.name }}</p>
@@ -34,10 +40,7 @@
             <p class="text">{{ comments.comment.content }}</p>
           </div>
         </div>
-        <input v-model="content" type="text" />
-        <div @click="send(index)">
-          <button>コメント</button>
-        </div>
+        
 
       </div>
   
@@ -57,13 +60,7 @@ export default {
     };
   },
 
-  computed: {
-    reverseIndex() {
-      return this.shares.slice().reverse();
-    },
-   
-
-  }, 
+  
 
   methods: {
      
