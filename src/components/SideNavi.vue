@@ -1,14 +1,8 @@
 <template>
   <div class = "frame">
     <div class="left-padding">
-      <h1>Memo+</h1>
-      <div class="flex icon-field" @click="$router.push('/home')">
-        <p>ホーム</p>
-      </div>
-      <div class="flex icon-field" @click="$router.push('/profile')">
-        <p>プロフィール</p>
-      </div>
-      <div class="flex icon-field" @click="$store.dispatch('logout')">
+      <h1>付箋ボード</h1>
+      <div class="icon-field" @click="$store.dispatch('logout')">
         <p>ログアウト</p>
       </div>
     </div>
@@ -28,15 +22,10 @@ export default {
 <style scoped>
 .frame{
   border-color:black;
-   background-color: #fdba00;
-  height:100%;
+   background-color: #977003;
+  width:100%;
 }
-.flex {
-  display: flex;
-}
-.logo {
-  width: 100px;
-}
+
 .icon-field {
   margin-top: 15px;
   cursor: pointer;
