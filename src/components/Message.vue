@@ -186,6 +186,7 @@ export default {
 <style scoped>
 
 .cover{
+  width:100%;
    display: flex;
   justify-content: center;
   flex-wrap: wrap;
