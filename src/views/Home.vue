@@ -28,6 +28,7 @@ export default {
 
 #navi{
   width:100%;
+  margin-right:0px;
 }
 .flex {
   display: flex;
