@@ -47,14 +47,14 @@ export default {
 .share {
   width:100%;
   display:flex;
+  vertical-align: middle;
 }
 .share textarea {
   
-  height: 40px;
+  height: 70px;
   border: 1px solid rgb(0, 134, 11);
   background-color: #ffffff;
   color: rgb(0, 0, 0);
-  resize: none;
 }
 button {
   width: 100px;

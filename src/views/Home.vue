@@ -20,8 +20,10 @@ export default {
 
 <style scoped>
 
+
 #navi{
   width:100%;
+
 }
 
 
