@@ -46,7 +46,7 @@ export default {
 
 <style scoped>
 .share {
-  margin: 15px;
+  display:flex;
 }
 .share textarea {
   width: 95%;
