@@ -71,7 +71,7 @@ export default {
      send(index) {
       axios
         .post("https://calm-atoll-21933.herokuapp.com/api/comment", {
-          share_id: this.shares[index].id,
+          share_id: this.shares[index].item.id,
           user_id: this.$store.state.user.id,
           content: this.content,
         })
