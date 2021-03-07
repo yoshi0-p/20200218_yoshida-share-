@@ -207,8 +207,9 @@ export default {
 }
 .message {
   margin: 20px;
+  padding:10px;
   background-color:rgb(255, 144, 231);
-  width:300px;
+  width:400px;
   border-bottom: solid 1px red;
   border-left: solid 1px red;
 
@@ -227,9 +228,9 @@ export default {
 }
 .comment {
   margin: 10px;
-  padding:20px;
+  padding:10px;
   background-color:rgb(144, 229, 255);
-  width:300px;
+  width:400px;
   border-bottom: solid 1px aquamarine;
   border-left: solid 1px aquamarine;
 
