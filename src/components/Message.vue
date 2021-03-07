@@ -226,11 +226,10 @@ export default {
   margin-right: 10px;
 }
 .comment {
-  margin: 20px;
-  margin-left:30px;
+  margin: 10px;
   padding:20px;
   background-color:rgb(144, 229, 255);
-  width:30%;
+  width:100%;
   border-bottom: solid 1px aquamarine;
   border-left: solid 1px aquamarine;
 
