@@ -30,7 +30,7 @@
           <button>コメント</button>
         </div> 
 
-         <div class="message" v-for="(comments, index) in value.comment" :key="index">
+         <div class="comment" v-for="(comments, index) in value.comment" :key="index">
            <div class="flex">
             <p class="name">{{ comments.comment_user.name }}</p>
            </div>
@@ -189,9 +189,11 @@ export default {
   margin-left: 50px;
 }
 .message {
-  padding: 20px;
-  border-bottom: solid 1px green;
-  border-left: solid 1px green;
+  margin: 20px;
+  background-color:rgb(255, 144, 231);
+  width:50vw;
+  border-bottom: solid 1px red;
+  border-left: solid 1px red;
 
 }
 .name {
@@ -205,5 +207,15 @@ export default {
 .number {
   margin-left: 10px;
   margin-right: 10px;
+}
+.comment {
+  margin: 20px;
+  margin-left:30px;
+  padding:20px;
+  background-color:rgb(144, 229, 255);
+  width:50vw;
+  border-bottom: solid 1px aquamarine;
+  border-left: solid 1px aquamarine;
+
 }
 </style>
