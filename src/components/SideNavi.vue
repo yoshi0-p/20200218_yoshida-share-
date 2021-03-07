@@ -31,6 +31,7 @@ export default {
 .icon-field {
   margin-top: 15px;
   cursor: pointer;
+  display:flex;
 }
 .icon {
   width: 25px;

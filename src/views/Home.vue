@@ -1,13 +1,12 @@
 <template>
   <div class="flex">
       <SideNavi />
-    <div class="right">
+   
       <div class="title">
         <p>最新５件のメモ
         </p>
       </div>
       <Message />
-    </div>
   </div>
 </template>
 
@@ -24,10 +23,6 @@ export default {
 
 <style scoped>
 
-.right {
-  width: 78%;
-  height: 100vh;
-}
 .flex {
   display: flex;
 }
