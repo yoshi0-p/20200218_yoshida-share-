@@ -1,12 +1,14 @@
 <template>
-
-      <SideNavi />
+    <div>
+     <SideNavi />
    
       <div class="title">
         <p>最新５件のメモ
         </p>
       </div>
       <Message />
+      </div>
+      
 
 </template>
 
