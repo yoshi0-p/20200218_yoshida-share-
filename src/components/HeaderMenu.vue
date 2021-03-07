@@ -24,13 +24,9 @@ export default {
   background-color: #977003;
   width:100%;
   height:75px;
-  justify-content: center;
   display:flex;
-  white-space: nowrap;
 }
-h1{
-  line-height: 75px;
-}
+
 .logout{
   line-height: 75px;
 }
