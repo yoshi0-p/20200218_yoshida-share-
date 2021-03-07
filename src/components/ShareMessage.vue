@@ -46,12 +46,10 @@ export default {
 <style scoped>
 .share {
   width:100%;
-  display:flex;
-  
+  display:flex;  
   height: 75px;
 }
 .share textarea {
-  vertical-align: middle;
   padding-left:20px;
   height:60px;
   vertical-align: middle;

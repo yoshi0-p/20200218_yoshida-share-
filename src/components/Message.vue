@@ -10,19 +10,7 @@
             class="icon"
             @click="del(index)"
             alt
-            v-if="path && profile"
           >[×]</p>
-          <p
-            src="../assets/detail.png"
-            @click="
-              $router.push({
-                path: '/detail/' + value.item.id,
-                params: { id: value.item.id },
-              })
-            "
-            alt
-            v-if="profile"
-          >[More]</p>
 
            <div class="comment-box">
          <input v-model="content" type="text" />
@@ -54,7 +42,6 @@
 <script>
 import axios from "axios";
 export default {
-  props: ["id"],
   data() {
     return {
       shares: [],
@@ -62,8 +49,6 @@ export default {
       profile: true,
     };
   },
-
-  
 
   methods: {
      
@@ -149,18 +134,9 @@ export default {
               shares.data.data[i].id
           )
           .then((response) => {
-            if (this.$route.name == "profile") {
-              if (response.data.item.user_id == this.$store.state.user.id) {
-                data.unshift(response.data);
-              }
-            } else if (this.$route.name == "detail") {
-              if (response.data.item.id == this.id) {
-                data.unshift(response.data);
-              }
-            } else {
+            
               data.unshift(response.data);
 
-            }
           });
       }
       this.shares = data;
@@ -170,14 +146,6 @@ export default {
 
   },
   created() {
-  
-    if (this.$route.name === "home") {
-      this.path = false;
-    }
-    if (this.$route.name === "detail") {
-      this.profile = false;
-      
-    }
     this.getShares();
   },
 };
