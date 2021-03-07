@@ -1,6 +1,7 @@
 <template>
     <div>
-     <SideNavi />
+      <div id="navi"><SideNavi /></div>
+     
    
       <div class="title">
         <p>最新５件のメモ
@@ -25,6 +26,9 @@ export default {
 
 <style scoped>
 
+#navi{
+  width:100%;
+}
 .flex {
   display: flex;
 }
