@@ -1,11 +1,10 @@
 <template>
   <div class = "frame">
-    <div class="left-padding">
+    
       <h1>付箋ボード</h1>
       <div class="icon-field" @click="$store.dispatch('logout')">
         <p>ログアウト</p>
       </div>
-    </div>
     <ShareMessage />
   </div>
 </template>
