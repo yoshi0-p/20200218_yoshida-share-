@@ -34,6 +34,10 @@
             <p class="text">{{ comments.comment.content }}</p>
           </div>
         </div>
+        <input v-model="content" type="text" />
+        <div @click="send(index)">
+          <button>コメント</button>
+        </div>
 
       </div>
   
@@ -63,11 +67,11 @@ export default {
 
   methods: {
      
-   
-     send() {
+
+     send(index) {
       axios
         .post("https://calm-atoll-21933.herokuapp.com/api/comment", {
-          share_id: this.id,
+          share_id: this.shares[index].id,
           user_id: this.$store.state.user.id,
           content: this.content,
         })
@@ -172,6 +176,7 @@ export default {
     }
     if (this.$route.name === "detail") {
       this.profile = false;
+      
     }
     this.getShares();
   },
