@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="cover">
     <div v-for="(value,index) in shares" :key="index">
       <div class="message">
         <div class="flex">
@@ -27,7 +27,7 @@
            <div class="comment-box">
          <input v-model="content" type="text" />
         <div @click="send(index)">
-          <button>コメント</button>
+          <button>追加</button>
         </div> 
         </div>
 
@@ -184,6 +184,12 @@ export default {
 </script>
 
 <style scoped>
+
+.cover{
+   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 .flex {
   display: flex;
 }
