@@ -45,12 +45,11 @@ export default {
 
 <style scoped>
 .share {
-  width:100vw;
+  width:100%;
   display:flex;
 }
 .share textarea {
   
-  width:50%;
   height: 40px;
   border: 1px solid rgb(0, 134, 11);
   background-color: #ffffff;
@@ -63,6 +62,5 @@ button {
   color: #fff;
   background-color: #000000;
   display: block;
-  margin: 0 0 0 auto;
 }
 </style>

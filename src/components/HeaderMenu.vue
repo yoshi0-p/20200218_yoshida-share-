@@ -1,8 +1,7 @@
 <template>
   <div class = "frame">
-    
       <h1>付箋ボード</h1>
-      <div class="icon-field" @click="$store.dispatch('logout')">
+      <div  @click="$store.dispatch('logout')">
         <p>ログアウト</p>
       </div>
     <ShareMessage />
