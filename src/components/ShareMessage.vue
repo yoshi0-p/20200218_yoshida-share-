@@ -48,10 +48,13 @@ export default {
   width:100%;
   display:flex;
   vertical-align: middle;
+  height: 75px;
 }
 .share textarea {
   
-  height: 60px;
+  padding-left:20px;
+  height:70px;
+  vertical-align: middle;
   width:50%;
   border: 1px solid rgb(0, 134, 11);
   background-color: #ffffff;
